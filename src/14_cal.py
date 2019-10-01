@@ -22,3 +22,12 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+if len(sys.argv) == 1:
+  print(calendar.month(datetime.now().year, datetime.now().month))
+elif len(sys.argv) == 2:
+  print(calendar.month(datetime.now().year, sys.argv[1]))
+elif len(sys.argv) == 3:
+  print(calendar.month(sys.argv[2], sys.argv[1]))
+else:
+  print("Please use program in the following manner: `14_cal.py month [year]`")
